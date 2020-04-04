@@ -11,7 +11,6 @@ namespace Sudoku
             Console.WriteLine("Hello World!");
             //ReadFile()
             //ValidateGrid()
-
         }
 
         public bool ValidateGrid(int[,] grid)
@@ -22,6 +21,13 @@ namespace Sudoku
             //GetSubGrids
             //Validate all groups of nine
             return false;
+        }
+        
+        public bool ValidateGridShape(int[,] grid)
+        {
+            var rows = grid.GetLength(0);
+            var columns = grid.GetLength(1);
+            return rows == 9 && columns == 9;
         }
 
         public bool ValidateGroupOfNine(int[] group)
